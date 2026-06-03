@@ -6,6 +6,8 @@ services:
     startCommand: node server/index.js
     plan: free
     envVars:
+      - key: NODE_VERSION
+        value: 20.20.2
       - key: JWT_SECRET
         generateValue: true
       - key: PORT
