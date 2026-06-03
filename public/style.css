@@ -225,6 +225,29 @@ html, body {
 .breakdown-list .q-pts { font-weight: 700; color: var(--green); width: 60px; text-align: right; }
 .breakdown-list .q-pts.zero { color: var(--red); }
 
+/* ─── Online players lobby ─── */
+.online-section { margin-bottom: 4px; }
+.section-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.online-count { background: var(--green); color: #000; border-radius: 999px; padding: 1px 7px; font-size: 0.75rem; font-weight: 700; margin-left: 6px; }
+.no-players { color: var(--text-muted); font-size: 0.9rem; padding: 12px 0; }
+.player-row { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: var(--bg); border-radius: 8px; margin-bottom: 6px; border: 1px solid #2a2a3e; }
+.player-row:hover { border-color: var(--accent); }
+.player-name { font-weight: 600; font-size: 0.95rem; }
+
+/* ─── Challenge popup ─── */
+.challenge-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  display: flex; align-items: flex-end; justify-content: center;
+  z-index: 250; padding: 0 20px 32px;
+}
+.challenge-popup {
+  background: var(--surface); border-radius: var(--radius);
+  padding: 24px 28px; width: 100%; max-width: 420px;
+  box-shadow: var(--shadow); animation: slide-up 0.2s ease;
+}
+.challenge-from { font-size: 1.1rem; text-align: center; }
+@keyframes slide-up { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
 /* ─── Reconnecting banner ─── */
 .reconnect-banner {
   position: fixed; top: 0; left: 0; right: 0;

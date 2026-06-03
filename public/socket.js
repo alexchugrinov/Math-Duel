@@ -37,7 +37,13 @@ const Socket = (() => {
     ws.onmessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
-        if (msg.type === 'auth_ok') setWsDot('connected');
+        if (msg.type === 'auth_ok') {
+          setWsDot('connected');
+          if (msg.onlineUsers) App.getState()._onlineUsers = msg.onlineUsers;
+        }
+        if (msg.type === 'online_users') {
+          App.getState()._onlineUsers = msg.users;
+        }
         dispatch(msg);
       } catch {}
     };
