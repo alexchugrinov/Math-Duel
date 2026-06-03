@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Duel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="topbar" class="topbar hidden">
+    <span class="topbar-logo">Math Duel</span>
+    <span class="topbar-user">
+      <span id="topbar-username"></span>
+      <span id="topbar-pvp-score" class="score-badge pvp" title="Best PVP score"></span>
+      <span id="topbar-train-score" class="score-badge train" title="Best Training score"></span>
+      <button id="btn-logout" class="btn btn-sm btn-ghost">Logout</button>
+    </span>
+    <span id="ws-status" class="ws-dot disconnected" title="Connection status"></span>
+  </div>
+
+  <main id="app">
+    <!-- screens are injected here -->
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div id="modal-box" class="modal-box"></div>
+  </div>
+
+  <script src="screens/login.js"></script>
+  <script src="screens/home.js"></script>
+  <script src="screens/training.js"></script>
+  <script src="screens/pvp.js"></script>
+  <script src="screens/leaderboard.js"></script>
+  <script src="ui.js"></script>
+  <script src="api.js"></script>
+  <script src="socket.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
